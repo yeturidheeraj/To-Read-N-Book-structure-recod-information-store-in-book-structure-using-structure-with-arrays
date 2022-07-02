@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<conio.h>
+struct	booklist
+{
+  int    bno;
+  char   bname[20];
+  int    qty;
+  int  cost;
+}b[100];
+
+void main()
+{
+int n,i;
+clrscr();
+printf("\n Enter Books N : ");
+scanf("%d",&n);
+printf("\n Enter %d books Records :\n",n);
+for(i=0;i<n;i++)
+{
+  printf("\n Book # %d :",i+1);
+  printf("\n ------------------");
+  printf("\n Book No: ");
+  scanf("%d",&b[i].bno);
+  printf("\n Book Name : ");
+  scanf("%s",&b[i].bname);
+  printf("\n No.of Books : ");
+  scanf("%d",&b[i].qty);
+  printf("\n Book Price : Rs. ");
+  scanf("%d",&b[i].cost);
+}
+printf("\n **** GOODWILL BOOK STORES BOOK LIST TABLE ******\n");
+printf("\n -------------------------------------------------\n\n");
+printf("\n SNO \t BOOK Name \t Quantity \t Cost(Rs.)\n");
+printf("-----------------------------------------------------\n");
+for(i=0;i<n;i++)
+{
+  printf("\n %d  \t %s        \t %d       \t %f",b[i].bno,b[i].bname,b[i].qty,(float)b[i].cost);
+  printf("\n --------------------------------------------------------\n");
+}
+printf("\n ******  Vist again ****");
+getch();
+}
